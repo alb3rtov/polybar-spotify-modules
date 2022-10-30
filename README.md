@@ -14,14 +14,18 @@ sudo apt-get install spotify-client
 ## Modules
 In order to add this module, you have to modify the `config.ini` file of polybar configuration. This file usually can be found in `/etc/polybar/config.ini`. (You need to have root permissions to write in this file)
 
-### Launch spotify and show artist/band and song module
+### Launch/close spotify and show artist/band and song module
 
-In order to launch spotify and show the artist/band and song currently playing, you have to add the next module to the `config.ini` file.
+In order to launch/close spotify and show the artist/band and song currently playing, you have to add the next module to the `config.ini` file.
+
+- Left click: open spotify
+- Right click: close spotify
 
 ```ini
 [module/spotify]
 type = custom/script
 click-left = exec spotify
+click-right = killall spotify 2> /dev/null
 interval = 2
 exec = ~/.config/polybar/scripts/check-sfy-running.sh
 format-padding = 1
