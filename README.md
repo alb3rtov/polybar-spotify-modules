@@ -57,7 +57,7 @@ then
       echo "%{F#9feb6a}spoti-icon %{F#696969} $band - $wp_song" 
     fi
   else #advertisement
-    echo "%{F#9feb6a}spoti-icon %{F#696969} $wp_song" 
+    echo "%{F#9feb6a}spoti-icon %{F#696969} $song" 
   fi
 
 else
